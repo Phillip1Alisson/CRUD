@@ -10,5 +10,17 @@
 			$this->nameItem = $name;
 		}
 
+		public function getNameItem(){
+			return $this->nameItem;
+		}
+
+		public function getIdItem(){
+			return $this->idItem;
+		}
+
+		public function updateNameItem($newName){
+			$this->nameItem = $newName;
+		}
+
 	}
 ?>
