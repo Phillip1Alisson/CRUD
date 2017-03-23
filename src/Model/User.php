@@ -6,10 +6,12 @@
 		private $idUser;
 		private $email;
 
-		function User($name, $idUser, $email){
+		
+
+		function __construct($name, $idUser, $email){
 			$this->name   = $name;
-			$this->email  = $email;
 			$this->idUser = $idUser;
+			$this->email = $email;
 		}
 
 		public function getName(){

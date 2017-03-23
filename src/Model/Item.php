@@ -5,7 +5,7 @@
 		private $idItem;
 		private $nameItem;
 
-		fucntion Item($name, $id){
+		function __construct($name, $id){
 			$this->idItem = $id;
 			$this->nameItem = $name;
 		}

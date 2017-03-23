@@ -5,9 +5,8 @@
 
 	class DesireList{
 		private $itens;
-		
 
-		function DesireList($itens){
+		function __construct($itens){
 			$this->itens = $itens;
 		}
 
