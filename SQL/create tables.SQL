@@ -22,8 +22,8 @@ CREATE TABLE desire_list(
 	id_user INT,
 	id_item INT,
 
-	CONSTRAINT UN_id_desire_list UNIQUE(id_desire_list),
-	CONSTRAINT PK_desire_list PRIMAREY KEY (id_user, id_item),
+	CONSTRAINT UN_id_desire_list UNIQUE (id_desire_list),
+	CONSTRAINT PK_desire_list PRIMARY KEY (id_user, id_item),
 	CONSTRAINT FK_users FOREIGN KEY (id_user) REFERENCES users(id_user),
 	CONSTRAINT FK_itens FOREIGN KEY (id_item) REFERENCES itens(id_item),
 );
