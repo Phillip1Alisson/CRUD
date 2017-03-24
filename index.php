@@ -35,10 +35,18 @@
 	
 	require_once(HOST. DAO. DS . "loader.php");
 	
-	use DAO\UserDAO;
+	use DAO\UserSQL as UserSQL;
+	use DAO\ItemSQL as ItemSQL;
+	use DAO\DesireListSQL as DesireListSQL;
 
-	$user = new UserDAO("Insert");
-	$user1 = $user->newUser("asdasd","pasdadhill@gmail.com","123456");
-	print_r($user1);
-	//var_dump($user);
+
+	use Model\User as User;
+	use Model\Item as Item;
+
+
+	$user = new UserSQL("localhost","root", "","CRUD");
+	$item = new ItemSQL("localhost","root", "","CRUD");
+	$item1 = $item->createItem(new Item("ALJKASLJ", NULL));
+	var_dump($item1);
+	
 ?>
