@@ -8,14 +8,20 @@
 		private $idUser;
 		private $email;
 		private $desireList;
-		
+		private $password;
 
-		function __construct($name, $idUser, $email, $itens){
+		function __construct($name, $idUser, $email, $itens, $password){
 			$this->name   = $name;
 			$this->idUser = $idUser;
 			$this->email = $email;
+			$this->password = $password;
+
 			if($itens != NULL)
 				$this->desireList = new DesireList($itens);
+		}
+
+		public function getPassword(){
+			return $this->password;
 		}
 
 		public function getName(){
