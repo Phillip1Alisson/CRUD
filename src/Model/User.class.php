@@ -1,15 +1,18 @@
 <?php
 	class User{
 		private $full_name;
-		private $id_user_user;
+		private $id_user;
 		private $email;
 		private $desireList; // array of itens
+		private $password;
 
-		public function __construct($full_name, $id_user, $email, $desireList = NULL){
+		
+		public function __construct($full_name, $id_user, $email, $password, $desireList = NULL){
 			$this->full_name = $full_name;
 			$this->id_user = $id_user;
 			$this->email = $email;
-			$this->esireList = $desireList;
+			$this->desireList = $desireList;
+			$this->password = $password;
 		}
 
 		public function setFull_name($name){
@@ -34,6 +37,10 @@
 
 		public function setDesireList($desireList){
 			$this->desireList = $desireList;
+		}
+
+		public function getPassword(){
+			return $this->password;
 		}
 	}
 ?>

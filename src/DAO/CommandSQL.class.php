@@ -1,12 +1,10 @@
 <?php
-	namespace DAO;
-
 	abstract class CommandSQL{
 
 		protected $conn;
 
-		function __construct($localServer, $login, $pass, $nameBanc){
-			$this->conn = mysqli_connect($localServer, $login, $pass, $nameBanc);
+		function __construct(){
+			$this->conn = mysqli_connect("localhost","root", "","CRUD");
 		}
 
 		public function executSQL($query, $conn){
