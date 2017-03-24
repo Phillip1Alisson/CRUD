@@ -1,7 +1,8 @@
 <?php
 
 	namespace DAO;
-	include('Conexion.php');
+	
+	//include('Conexion.php');
 	use DAO\Conexion as Conexion;
 
 	class DeleteClass extends Conexion{

@@ -1,9 +1,11 @@
 <?php
-	include('Conexion.php');
-	use DAO\Conexion as Conexion;
-	namespace DAO;
+	//include('Conexion.php');
 
-	class UpdateClass exteds Conexion{
+	
+	namespace DAO;
+	
+	use DAO\Conexion as Conexion;
+	class UpdateClass extends Conexion{
 
 		function __construct($localServer, $login, $pass, $nameBanc){
 			parent::__construct($localServer, $login, $pass, $nameBanc);

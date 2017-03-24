@@ -30,6 +30,10 @@
 			return $this->desireList;
 		}
 
+		public function getIdUser(){
+			return $this->idUser;
+		}
+
 		public function __tostring(){
 			return 'testing class';
 		}

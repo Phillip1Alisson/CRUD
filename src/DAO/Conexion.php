@@ -1,11 +1,15 @@
 <?php
 	namespace DAO;
-
+	
 	class Conexion{
-		private $conn;
+		protected $conn;
 
 		function __construct($localServer, $login, $pass, $nameBanc){
 			$this->conn = mysqli_connect($localServer, $login, $pass, $nameBanc);
+		}
+
+		public function executSQL($query, $conn){
+			return mysqli_query($conn, $query);
 		}
 
 		public function searchUserBanc($email, $password){
@@ -26,9 +30,16 @@
 		}
 
 		public function insertUserBanc($nameUser, $email, $password){
-			$query = "INSERT INTO users (full_name, email, password) VALUES ('".$nameUser."', '".$email."', '".$password.",);";
+			$query = "INSERT INTO users (full_name, email, password) VALUES ('".$nameUser."', '".$email."', '".$password."');";
 			return mysqli_query($this->conn, $query);
 		}
+
+		public function deleteUser($idUser){
+			$query = "DELETE FROM users WHERE id_user = ".$idUser;
+			return mysqli_query($this->conn, $query);
+		}
+
+
 
 	}
 ?>
