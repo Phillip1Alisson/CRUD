@@ -27,8 +27,8 @@
 						$cont = 0;
 						$itens[$cont] = new Item($desire["name_item"], $desire["id_item"]);
 						while($desire->fetch_array(MYSQLI_ASSOC));
-							$itens[$cont] = new Item($desire["name_item"], $desire["id_item"]);
 							$cont = $cont+1;
+							$itens[$cont] = new Item($desire["name_item"], $desire["id_item"]);
 						}
 						$desireList = new desireList($itens);
 					}

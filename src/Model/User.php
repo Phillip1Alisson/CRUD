@@ -40,10 +40,8 @@
 			return $this->idUser;
 		}
 
-		public function __tostring(){
-			return 'testing class';
+		public function setDesireList($desireList){
+			$this->desireList = $desireList;
 		}
-
-
 	}
 ?>

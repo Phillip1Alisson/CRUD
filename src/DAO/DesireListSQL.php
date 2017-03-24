@@ -29,7 +29,7 @@
 		public function select($obj, $otherObj = False){
 			if(!$otherObj)
 				if($obj instanceof User)
-					$query = "SELECT id_item FROM desire_list WHERE id_user = '".$obj->getIdUser();
+					$query = "SELECT id_item, name_item FROM desire_list WHERE id_user = '".$obj->getIdUser(). " INNER JOIN itens ON desire_list.id_item = itens.id_item";
 				else
 					$query = "SELECT id_user FROM desire_list WHERE id_item = '".$obj->getIdItem();
 			else

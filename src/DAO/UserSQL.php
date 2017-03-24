@@ -47,9 +47,9 @@
 		public function loginUser($email, $password){
 			$datasUser =$this->callUser($email, $password);
 			if(!is_null($datasUser)){
-				return new User($datasUser["full_name"], $datasUser["id_user"], $email, NULL, $password);
+				return $datasUser;
 			}
-			return "Usuario inexistente";
+			return NULL;
 		}
 
 
